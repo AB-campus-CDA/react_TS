@@ -1,0 +1,38 @@
+/* MODAL */
+
+.modal {
+    z-index: 90;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(7px);
+    background-color: #e2ded084;
+    cursor: grab;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: mymodal 300ms 50ms ease-in both;
+ }
+
+.modal .content {
+    z-index: 100;
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+    padding: 2rem;
+    background-color: #4e4f50;
+    color: #e2ded0;
+}
+
+
+
+@keyframes mymodal {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

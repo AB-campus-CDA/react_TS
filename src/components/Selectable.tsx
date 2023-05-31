@@ -1,21 +1,25 @@
-import React, {useState} from 'react';
-import {CountryList} from "./AllFlagsList";
+import React, {useEffect, useState} from 'react';
+import {Country} from "../App";
 
 type SelectableProps = {
     country: {
         name: string;
         flagUrl: string;
     };
-    selectState: {list:CountryList, setter:React.Dispatch<React.SetStateAction<CountryList>>};
+    selectState: {list:Country[], setter:React.Dispatch<React.SetStateAction<Country[]>>};
+    clearSignal: boolean;
 }
 
 
-export default function Selectable({country, selectState}: SelectableProps) {
-    const [isHovered, setIsHovered] = useState(false)
-    const [isSelected, setIsSelected] = useState(false)
+export default function Selectable({country, selectState, clearSignal}: SelectableProps) {
+    const [isHovered, setIsHovered] =   useState<boolean>(false)
+    const [isSelected, setIsSelected] = useState<boolean>(false)
 
+    useEffect(()=> {
+        setIsSelected(false)
+    }, [clearSignal])
 
-        function handleHover() {
+    function handleHover() {
         setIsHovered(true)
     }
 

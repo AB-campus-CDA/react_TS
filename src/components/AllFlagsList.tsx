@@ -1,20 +1,17 @@
 import React from 'react';
 import Loader from "./Loader";
 import Selectable from "./Selectable";
+import {Country} from "../App";
 
 type AllFlagsListProps = {
-    data: CountryList | null;
-    selectState: {list:CountryList, setter:React.Dispatch<React.SetStateAction<CountryList>>};
+    data: Country[] | null;
+    selectState: {list:Country[], setter:React.Dispatch<React.SetStateAction<Country[]>>};
+    clearSignal: boolean;
 }
 
-export type CountryList = {
-    name: string;
-    flagUrl: string;
-}[]
 
 
-
-export default function AllFlagsList({data, selectState}: AllFlagsListProps) {
+export default function AllFlagsList({data, selectState, clearSignal}: AllFlagsListProps): JSX.Element {
 
     return (
         <div className={`border mar_lg halfV scrollable relative`}>
@@ -24,7 +21,7 @@ export default function AllFlagsList({data, selectState}: AllFlagsListProps) {
             <div className={`flexR wrap `}>
                 {data.sort((a,b)=>a.name.localeCompare(b.name)).map((country)=> {
                     return (
-                        <Selectable country={country} key={country.name} selectState={selectState} />
+                        <Selectable country={country} key={country.name} selectState={selectState} clearSignal={clearSignal} />
                     )
                 } )}
             </div>

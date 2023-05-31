@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react'
 import axios from "axios";
-import AllFlagsList, {CountryList} from "./components/AllFlagsList";
+import AllFlagsList from "./components/AllFlagsList";
 import SelectedField from './components/SelectedField';
 import Validator from "./components/Validator";
 
@@ -14,30 +14,37 @@ export type APICountry = {
     };
 }
 
-
+export type Country = {
+    name: string;
+    flagUrl: string;
+}
 
 
 function App() {
-    const [data, setData] = useState(null)
-    const [fetching, setFetching] = useState(false)
-    const [modal, setModal] = useState(null)
-    const [selected, setSelected] = useState<CountryList>([])
-
+    const [data, setData] =                 useState< Country[] | null>(null)
+    const [selected, setSelected] =         useState< Country[] >([])
+    const [clearSignal, setClearSignal] =   useState<boolean>(false)
     const selectState = {list:selected, setter:setSelected}
 
 
     useEffect(()=> {
-        if (!data && !fetching) {
-            setFetching(true)
+        if (!data) {
             console.log("fetching data ...")
             axios('https://restcountries.com/v3.1/all?fields=name,flags')
                 .then((resp: any) => setData(resp.data.map((country: APICountry)=>{return {name: country.name.common, flagUrl: country.flags.png}})))
         }
     }, [])
 
+    useEffect(()=> {
+        if (clearSignal) {
+            setClearSignal(false)
+            setSelected([])
+        }
+    }, [clearSignal])
+
 
     return (
-      <main className={`pad_xl`}>
+      <main className={`pad_xl relative full-screen`}>
 
           {/* title */}
           <p className={`flexR justif-center border mar_lg`}>
@@ -46,13 +53,13 @@ function App() {
           </p>
 
           {/* list of all flags */}
-          <AllFlagsList data={data} selectState={selectState} />
+          <AllFlagsList data={data} selectState={selectState} clearSignal={clearSignal} />
 
           {/* user selection */}
           <SelectedField selected={selected} />
 
           {/* validation block */}
-          <Validator selected={selected} />
+          <Validator selected={selected} setClearSignal={setClearSignal}/>
 
       </main>
   )

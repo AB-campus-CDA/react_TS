@@ -1,10 +1,10 @@
 import React from 'react';
-import {CountryList} from "./AllFlagsList";
+import {Country} from "../App";
 import Tag from "./Tag";
 
 
 type SelectedFieldProps = {
-    selected: CountryList;
+    selected: Country[];
 }
 
 

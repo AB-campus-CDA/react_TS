@@ -14,7 +14,7 @@
 }
 
 .flex-1 {
-    flex: 1 1;  /*can add basis in %*/
+    flex: 1 1 0;  /*can add basis in %*/
 }
 
 .flex-none {
@@ -39,4 +39,9 @@
 
 .sticky {
     position: sticky;
+}
+
+.full-screen {
+    width: 100vw;
+    height: 100vh;
 }

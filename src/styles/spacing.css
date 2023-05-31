@@ -4,6 +4,10 @@
     padding: 1rem 2rem;
 }
 
+.pad_input {
+    padding: 0.2rem 0.5rem;
+}
+
 .pad_md {
     padding: 1rem;
 }
@@ -27,6 +31,10 @@
 
 .mar_xl {
     margin: 3rem;
+}
+
+.maxInput {
+    width: calc(100% - 1rem);
 }
 
 .border {
