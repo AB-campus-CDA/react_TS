@@ -1,0 +1,24 @@
+/* COLOR SCHEMA */
+
+* {
+    background-color: #e2ded0;
+    border-color: #647c90;
+    color: #746c70;
+}
+
+.hovered {
+    background-color: #647c90;
+    color: #4e4f50;
+    overflow: visible !important;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.selected {
+    border: #4e4f50;
+    background-color: #647c90;
+    color: #e2ded0;
+    font-weight: bold;
+}

@@ -1,0 +1,17 @@
+/* VISIBILITY */
+
+.hidden {
+    display: none;
+}
+
+.block {
+    display: block;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.overflow-scroll {
+    overflow: scroll;
+}

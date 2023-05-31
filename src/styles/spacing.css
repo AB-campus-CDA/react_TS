@@ -1,0 +1,43 @@
+/* SPACING VARIABLES */
+
+.pad_btn {
+    padding: 1rem 2rem;
+}
+
+.pad_md {
+    padding: 1rem;
+}
+
+.pad_xl {
+    padding: 3rem;
+}
+
+
+.mar_sm {
+    margin: 0.5rem;
+}
+
+.mar_md {
+    margin: 1rem;
+}
+
+.mar_lg {
+    margin: 1.5rem;
+}
+
+.mar_xl {
+    margin: 3rem;
+}
+
+.border {
+    border-width: 1px;
+    border-style: solid;
+}
+
+.halfV {
+    height: 50vh;
+}
+
+.scrollable {
+    overflow: scroll;
+}

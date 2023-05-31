@@ -1,0 +1,44 @@
+/* LOADER */
+
+.loader {
+    position: relative;
+    animation: loader-1 2.0s infinite linear;
+}
+
+.loader:before,
+.loader:after {
+     content: '';
+     width: 0;
+     height: 0;
+     border: .5em solid currentColor;
+     display: block;
+     position: absolute;
+     border-radius: 100%;
+     animation: loader-2 2s infinite ease-in-out;
+ }
+.loader:before {
+     top: 0;
+     left: 50%;
+ }
+.loader:after {
+     bottom: 0;
+     right: 50%;
+     animation-delay: -1s;
+ }
+
+
+@keyframes loader-1 {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes loader-2 {
+    0%,
+    100% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1);
+    }
+}

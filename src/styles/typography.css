@@ -1,0 +1,12 @@
+/* TYPOGRAPHY */
+
+.h1 {;
+}
+
+.h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: #647c90;
+    color: #e2ded0;
+    top:0;
+}

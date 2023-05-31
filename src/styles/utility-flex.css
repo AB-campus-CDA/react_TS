@@ -1,0 +1,42 @@
+/* UTILITY FIRST */
+
+.flexR {
+    display: flex;
+}
+
+.flexC {
+    display: flex;
+    flex-direction: column;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.flex-1 {
+    flex: 1 1;  /*can add basis in %*/
+}
+
+.flex-none {
+    flex: none;
+}
+
+.justif-center {
+    justify-content: center;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.sticky {
+    position: sticky;
+}

@@ -1,0 +1,41 @@
+/* CARDS */
+
+.country_card {
+    flex: none;
+    margin: 1rem;
+    border: 1px solid #647c90;
+    padding: 0.5rem;
+    height: 100px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card_image {
+    flex: none;
+    height: 50px;
+}
+
+.legend {
+    text-align: center;
+    max-height: 1.5rem;
+    /*
+    text-overflow: ellipsis;
+    */
+    overflow: hidden;
+}
+
+.mini_card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mini_image {
+    height: 2rem;
+    width: 3rem;
+    padding-right: 0.3rem;
+    padding-left: 0.3rem;
+    object-fit: contain;
+}
