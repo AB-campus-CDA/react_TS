@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 
+
 type TagProps = {
     country: {
         name: string;
@@ -8,9 +9,8 @@ type TagProps = {
 }
 
 
-export default function Tag({country}: TagProps) {
+export default function Tag({country}: TagProps): JSX.Element {
     const [isHovered, setIsHovered] = useState(false)
-    const [isSelected, setIsSelected] = useState(false)
 
     function handleHover() {
         setIsHovered(true)

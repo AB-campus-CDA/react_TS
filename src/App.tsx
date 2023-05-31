@@ -1,5 +1,6 @@
 import {useEffect, useState} from 'react'
 import axios from "axios";
+
 import AllFlagsList from "./components/AllFlagsList";
 import SelectedField from './components/SelectedField';
 import Validator from "./components/Validator";
@@ -20,7 +21,7 @@ export type Country = {
 }
 
 
-function App() {
+function App(): JSX.Element {
     const [data, setData] =                 useState< Country[] | null>(null)
     const [selected, setSelected] =         useState< Country[] >([])
     const [clearSignal, setClearSignal] =   useState<boolean>(false)

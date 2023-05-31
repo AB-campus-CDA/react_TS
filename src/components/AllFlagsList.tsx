@@ -1,14 +1,15 @@
 import React from 'react';
+
 import Loader from "./Loader";
 import Selectable from "./Selectable";
 import {Country} from "../App";
+
 
 type AllFlagsListProps = {
     data: Country[] | null;
     selectState: {list:Country[], setter:React.Dispatch<React.SetStateAction<Country[]>>};
     clearSignal: boolean;
 }
-
 
 
 export default function AllFlagsList({data, selectState, clearSignal}: AllFlagsListProps): JSX.Element {

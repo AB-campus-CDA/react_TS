@@ -1,5 +1,7 @@
 import React, {useEffect, useState} from 'react';
+
 import {Country} from "../App";
+
 
 type SelectableProps = {
     country: {
@@ -11,7 +13,7 @@ type SelectableProps = {
 }
 
 
-export default function Selectable({country, selectState, clearSignal}: SelectableProps) {
+export default function Selectable({country, selectState, clearSignal}: SelectableProps): JSX.Element {
     const [isHovered, setIsHovered] =   useState<boolean>(false)
     const [isSelected, setIsSelected] = useState<boolean>(false)
 

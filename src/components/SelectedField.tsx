@@ -1,4 +1,5 @@
 import React from 'react';
+
 import {Country} from "../App";
 import Tag from "./Tag";
 
@@ -8,8 +9,7 @@ type SelectedFieldProps = {
 }
 
 
-
-export default function SelectedField({selected}: SelectedFieldProps) {
+export default function SelectedField({selected}: SelectedFieldProps): JSX.Element {
 
     return (
         <div className={`border mar_lg`}>
